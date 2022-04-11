@@ -10,3 +10,7 @@ Estudo do uso dos comandos da linguagem SQL.
 Copie o código fonte dos arquivos e coloque no compilador online de SQL, com link a seguir, para ver os resultados.
 
 https://www.w3schools.com/mySQl/trymysql.asp?filename=trysql_select_all
+
+Ou 
+
+https://sqliteonline.com/
