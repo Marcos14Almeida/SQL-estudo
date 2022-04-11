@@ -1,0 +1,3 @@
+SELECT * FROM Customers
+WHERE address REGEXP '^[0-9]' AND address REGEXP ','
+ORDER BY City, Address ASC
