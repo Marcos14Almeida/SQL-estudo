@@ -42,3 +42,14 @@ ORDER BY Customers.CustomerName;
 --------------------------------------------------------------
                         CROSS JOIN
 --------------------------------------------------------------
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+CROSS JOIN Orders;
+
+-- If you add a WHERE clause (if table1 and table2 has a relationship), the CROSS JOIN will produce the same result as the INNER JOIN clause:
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+CROSS JOIN Customers ON Orders.CustomerID=Customers.CustomerID AND Customers.CustomerName LIKE 'a%'
+ORDER BY Customers.CustomerName;
+
+
