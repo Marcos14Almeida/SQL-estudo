@@ -17,6 +17,13 @@ SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
 LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 GROUP BY ShipperName;
 
+-- outro teste
 SELECT Orders.EmployeeID,Employees.LastName,COUNT(Orders.EmployeeID) FROM Orders
 LEFT JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
 GROUP BY Orders.EmployeeID;
+
+-- Em ordem decrescente
+SELECT Orders.EmployeeID,Employees.LastName,COUNT(Employees.LastName) AS total FROM Orders
+INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY Orders.EmployeeID 
+ORDER BY total DESC;
