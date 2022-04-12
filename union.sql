@@ -10,3 +10,12 @@ SELECT City,Address FROM Customers
 UNION
 SELECT City,Address FROM Suppliers
 ORDER BY City;
+
+
+----------------------------------------------------------
+-- COMBINE SEARCH INTO 1 COLUMN
+SELECT Customers.City
+FROM Customers
+UNION
+SELECT Categories.CategoryName
+FROM Categories
