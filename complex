@@ -1,0 +1,7 @@
+--  Cria a coluna meta=mês*2
+-- 'Sucesso' Se o dia>meta
+-- Conta o numero de 'Sucesso' ou 0
+-- Agrupa pelas diferentes metas e resultados
+SELECT OrderDate, MONTH(OrderDate)*2 As Meta, DAY(OrderDate) AS Dia, MONTH(OrderDate) AS Mes, YEAR(OrderDate) AS Ano, 
+IF(DAY(OrderDate)>MONTH(OrderDate)*2,'Sucesso',0) AS Resul, COUNT(IF(DAY(OrderDate)>MONTH(OrderDate)*2,'Sucesso',0))
+FROM Orders GROUP BY Meta,Resul;
