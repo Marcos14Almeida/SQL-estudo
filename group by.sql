@@ -11,6 +11,11 @@ SELECT COUNT(CustomerID), Country
 FROM Customers
 GROUP BY Country;
 
+-----------------------------------------
+-- Items que aparecem pelo menos 5 vezes
+SELECT *,COUNT(OrderID) as Total FROM OrderDetails
+GROUP BY OrderID HAVING COUNT(*)>5;
+
 -------------------------------------------
 -- WITH JOIN
 SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
@@ -26,4 +31,10 @@ GROUP BY Orders.EmployeeID;
 SELECT Orders.EmployeeID,Employees.LastName,COUNT(Employees.LastName) AS total FROM Orders
 INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
 GROUP BY Orders.EmployeeID 
+ORDER BY total DESC;
+
+--Com contagem >50 -> HAVING
+SELECT Orders.EmployeeID,Employees.LastName,COUNT(Employees.LastName) AS total FROM Orders
+INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY Orders.EmployeeID HAVING total>50
 ORDER BY total DESC;
