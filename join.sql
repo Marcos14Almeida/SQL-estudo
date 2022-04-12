@@ -51,5 +51,13 @@ SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
 FROM Orders
 CROSS JOIN Customers ON Orders.CustomerID=Customers.CustomerID AND Customers.CustomerName LIKE 'a%'
 ORDER BY Customers.CustomerName;
+--------------------------------------------------------------
+                        SELF JOIN
+--------------------------------------------------------------
+--> Procura items da mesma tabela com o mesmo preço
+SELECT P.ProductID AS ID1, P.ProductName, P2.ProductID AS ID2,P2.ProductName, P.Price
+FROM Products P, Products P2
+WHERE P.ProductName <> P2.ProductName
+AND P.Price=P2.Price ;
 
 
