@@ -16,3 +16,7 @@ GROUP BY Country;
 SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
 LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 GROUP BY ShipperName;
+
+SELECT Orders.EmployeeID,Employees.LastName,COUNT(Orders.EmployeeID) FROM Orders
+LEFT JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY Orders.EmployeeID;
