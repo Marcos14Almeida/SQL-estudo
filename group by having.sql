@@ -38,3 +38,10 @@ SELECT Orders.EmployeeID,Employees.LastName,COUNT(Employees.LastName) AS total F
 INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
 GROUP BY Orders.EmployeeID HAVING total>50
 ORDER BY total DESC;
+
+--Adiciona coluna Se >100 =1, se <100 =0
+SELECT Orders.EmployeeID,Employees.LastName,COUNT(Employees.LastName) AS total, if(COUNT(Employees.LastName) > 100,1,0) as binario 
+FROM Orders
+INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID
+GROUP BY Orders.EmployeeID HAVING total>50
+ORDER BY total DESC;
