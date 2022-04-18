@@ -1,3 +1,4 @@
+https://www.w3schools.com/mySQl/mysql_constraints.asp
 
 CREATE TABLE table_name (
     column1 datatype constraint,
