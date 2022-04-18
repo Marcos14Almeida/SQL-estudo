@@ -38,6 +38,9 @@ VALUES ('Dudu','ATA',28,82);
 INSERT INTO Jogador
 VALUES ('CR7','ATA',36,89);
 
+INSERT INTO Jogador (Name)
+VALUES ('Pirlo'); -- Create null values in other columns
+
 DELETE FROM Jogador 
 WHERE jogadorid IS NULL;
 
