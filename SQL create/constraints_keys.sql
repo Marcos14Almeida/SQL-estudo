@@ -26,3 +26,13 @@ CREATE TABLE Persons (
     CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
 );
 Note: In the example above there is only ONE PRIMARY KEY (PK_Person). However, the VALUE of the primary key is made up of TWO COLUMNS (ID + LastName).
+
+--------------------------------------
+-- FOREIGN KEY Refers to a child Table
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
