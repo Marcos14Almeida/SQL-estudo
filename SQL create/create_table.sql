@@ -2,6 +2,8 @@
 
 DROP TABLE Jogador;
 
+-------------------------------
+-- NOVA TABELA
 CREATE TABLE Jogador (
     jogadorID int,
     Name varchar(255),
@@ -9,3 +11,20 @@ CREATE TABLE Jogador (
     Age int,
     Overall int
 );
+
+-- TABELA CÓPIA DE UMA OUTRA
+CREATE TABLE JogadorCopy AS
+SELECT Name, jogadorID
+FROM Jogador;
+
+-------------------------------
+-- ALTERAR
+ALTER TABLE Jogador
+ADD Gols int;
+
+ALTER TABLE Jogador
+MODIFY COLUMN Gols double;
+
+
+ALTER TABLE Jogador
+DROP COLUMN  Gols;
