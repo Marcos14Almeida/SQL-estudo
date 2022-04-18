@@ -1,9 +1,11 @@
 -- TO RUN: https://sqliteonline.com/
 
-CREATE TABLE Persons (
-    PersonID int,
-    LastName varchar(255),
-    FirstName varchar(255),
-    Address varchar(255),
-    City varchar(255)
+DROP TABLE Jogador;
+
+CREATE TABLE Jogador (
+    jogadorID int,
+    Name varchar(255),
+    Position varchar(255),
+    Age int,
+    Overall int
 );
