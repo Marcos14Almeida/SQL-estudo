@@ -20,7 +20,8 @@ FROM Jogador;
 -------------------------------
 -- ALTERAR
 ALTER TABLE Jogador
-ADD Gols int;
+ADD Gols int
+ADD Dia date;
 
 ALTER TABLE Jogador
 MODIFY COLUMN Gols double;
