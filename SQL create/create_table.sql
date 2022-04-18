@@ -20,7 +20,7 @@ FROM Jogador;
 -------------------------------
 -- ALTERAR
 ALTER TABLE Jogador
-ADD Gols int
+ADD Gols int DEFAULT 0
 ADD Dia date;
 
 ALTER TABLE Jogador
