@@ -46,3 +46,5 @@ CREATE TABLE Orders (
     REFERENCES Persons(PersonID)
 );
 
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
