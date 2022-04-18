@@ -35,6 +35,9 @@ DROP COLUMN  Gols;
 INSERT INTO Jogador (Name,Position,Age,Overall)
 VALUES ('Dudu','ATA',28,82);
 
+INSERT INTO Jogador
+VALUES ('CR7','ATA',36,89);
+
 DELETE FROM Jogador 
 WHERE jogadorid IS NULL;
 
