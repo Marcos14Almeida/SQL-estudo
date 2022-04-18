@@ -6,7 +6,7 @@ DROP TABLE Jogador;
 -- NOVA TABELA
 CREATE TABLE Jogador (
     PersonID int NOT NULL AUTO_INCREMENT,
-    Name varchar(255),
+    Name varchar(255) NOT NULL,
     Position varchar(255),
     Age int,
     Overall int
